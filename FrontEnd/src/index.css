@@ -1,0 +1,943 @@
+/* ================= ROOT COLORS (Light Theme) ================= */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+p {
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+/* Paragraphs & normal text */
+p, li, span, td, th, label {
+  font-size: 17px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-size: 700;
+}
+
+h4, h5, h6 {
+  font-size: 600;
+}
+
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --muted-surface: #f1f5fb;
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --accent-2: #3b82f6;
+  --accent-3: #f97316;
+  --border: #d5deef;
+  --shadow-lg: 0 10px 26px rgba(0,0,0,0.08);
+  --radius: 14px;
+  font-family: "Inter","Poppins",sans-serif;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===================== APP CONTAINER ===================== */
+.app {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ===================== NAVBAR ===================== */
+.site-header {
+  position: sticky;
+  top: 16px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index: 20;
+}
+
+.home-hero-image {
+  width: 80px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .home-hero-image {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.brand {
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.logo {
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background: linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:700;
+}
+.brand h1 {
+  margin:0;
+  font-size:18px;
+  font-weight:700;
+}
+
+.nav-links {
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.nav-links a {
+  padding:8px 14px;
+  text-decoration:none;
+  color:var(--muted);
+  border-radius:8px;
+  font-weight:600;
+  transition:.15s;
+}
+.nav-links a:hover {
+  color:var(--accent);
+  background:#e7efff;
+}
+.nav-links a.active {
+  background:var(--accent);
+  color:#fff;
+  box-shadow: 0 6px 16px rgba(37,99,235,0.2);
+}
+
+/* ===================== HOME SECTION ===================== */
+.nav-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;
+  text-align: center;
+}
+
+/* Title text */
+.nav-title h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.4;
+  text-align: center;        /* text center */
+}
+
+.hero {
+  margin-top:20px;
+  padding:40px;
+  border-radius:var(--radius);
+  background: var(--surface);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-lg);
+  display: block;
+}
+
+@media (max-width:900px){
+  .hero { display: block; }
+}
+ul li {
+  line-height: 1.8;
+}
+
+.hero h2 {
+  margin:0;
+  font-size:30px;
+  font-weight:800;
+}
+.hero p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 17px;
+  width: 100%;
+  max-width: none;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+}
+
+.snapshot-box {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.mt {
+  margin-top: 25px;
+}
+
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* TEAM MEMBERS GRID */
+.team-member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 30px;
+  margin-bottom: 20px;
+}
+
+.team-member {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 6px 0;
+}
+
+.name {
+  font-weight: 600;
+  color: #222;
+}
+
+.usn {
+  font-weight: 600;
+  color: #3366ff;
+}
+
+/* INFO BLOCKS (HOD + GUIDE) */
+.info-block-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 0px;
+}
+
+.info-block {
+  flex: 1;
+  background: #f6f8ff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+/* CTA */
+.cta-row {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+
+.btn {
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+  transition:.2s;
+}
+.btn:hover { transform:translateY(-2px); }
+
+.btn.primary { background:var(--accent); color:white; }
+.btn.secondary { background:var(--accent-2); color:white; }
+.btn.ghost { background:#eef2ff; color:var(--accent); }
+
+/* ===================== SNAPSHOT ===================== */
+.snapshot {
+  padding:16px;
+  background:#f8faff;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+}
+
+/* ===================== SECTIONS ===================== */
+.section { margin-top:32px; }
+.card {
+  padding:22px;
+  border-radius:var(--radius);
+  background:var(--surface);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-lg);
+}
+
+/* GRID */
+.team-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:20px;
+}
+.team-card {
+  display:flex;
+  gap:12px;
+  padding:16px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+}
+.avatar {
+  width:72px;
+  height:72px;
+  background:#e2e8f0;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  font-weight:700;
+  color:var(--accent);
+}
+
+.team-meta h3 {
+  margin:0;
+  font-size:16px;
+  font-weight:700;
+}
+.team-meta .role {
+  color:var(--accent-2);
+  margin:4px 0;
+  font-size:13px;
+  font-weight:600;
+}
+.team-meta .bio {
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ABOUT */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (max-width:900px) {
+  .about-grid { grid-template-columns:1fr; }
+}
+
+.about-image {
+  width: 30%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+}
+
+.about-image {
+  width: 20%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+/*Flow chart image size*/
+.about {
+  width: 35%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* 🔥 Hover - Image comes forward */
+.about-image:hover {
+  transform: scale(1.06) translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+}
+/*for flow chart*/
+.about:hover {
+  transform: scale(1.06) translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+}
+/* RESULTS */
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gallery-card {
+  padding:10px;
+  border-radius:12px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  display:inline-flex;
+  flex-direction:column;
+  gap:10px;
+  place-items:center;
+}
+.gallery-card img {
+  width:50%;
+  max-width: 100%;
+  height:auto;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* EVALUATION */
+.grid {
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:20px;
+}
+@media (max-width:900px){
+  .grid { grid-template-columns:1fr; }
+}
+
+.preview-table {
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+.preview-table th,
+.preview-table td {
+  border:1px solid var(--border);
+  padding:8px;
+  background:#f8faff;
+  text-align:center;
+}
+
+/* INPUTS */
+.input-file {
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:white;
+  margin-top:10px;
+  width:100%;
+}
+
+/* CONTACT */
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 40px;
+  gap:20px;
+}
+@media(max-width:900px){
+  .contact-grid { grid-template-columns:1fr; }
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 550px;
+  gap: 24px;
+  align-items: start;
+  margin-left: 30px;
+}
+
+.feedback-form {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#fff;
+}
+
+textarea { resize:vertical; min-height:130px; }
+
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  background: #f0f4ff;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ===================== EXISTING ANIMATIONS ===================== */
+/* ===== SAFE SECTION ANIMATION ===== */
+.section.animate,
+.hero.animate,
+.card.animate {
+  animation: fadeUpSafe 0.7s ease forwards;
+}
+
+@keyframes fadeUpSafe {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===================== NEW ANIMATIONS ADDED BELOW ===================== */
+
+@keyframes fadeHead {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* ================= SAFE CONTENT ANIMATION ================= */
+
+/* Animate only inside .content-animate */
+.content-animate h1,
+.content-animate h2,
+.content-animate h3,
+.content-animate p {
+  opacity: 0;
+  animation: safeFadeUp 0.8s ease forwards;
+}
+
+@keyframes safeFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+audio {
+  opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+}
+audio,
+audio * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: none !important;
+  transform: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeText {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Hover Float */
+.card:hover,
+.info-block:hover,
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 32px rgba(0,0,0,0.16);
+  transition: .3s ease;
+}
+
+/* Logo Pulse */
+.logo {
+  animation: pulse 2.3s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* Gallery Image Zoom */
+.gallery-card img {
+  transition: 0.3s ease;
+}
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Navbar Hover Glow */
+.nav-links a:hover {
+  text-shadow: 0 2px 8px rgba(37,99,235,0.4);
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ================= ROOT COLORS (Light Theme) ================= */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --muted-surface: #f1f5fb;
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --accent-2: #3b82f6;
+  --accent-3: #f97316;
+  --border: #d5deef;
+  --shadow-lg: 0 10px 26px rgba(0,0,0,0.08);
+  --radius: 14px;
+  font-family: "Inter","Poppins",sans-serif;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===================== APP CONTAINER ===================== */
+.app {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================== NAVBAR ===================== */
+.site-header {
+  position: sticky;
+  top: 16px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index: 20;
+}
+
+/* ... YOUR ENTIRE EXISTING CSS CONTINUES UNCHANGED ... */
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================================= */
+/* =============== NEW SAFE ANIMATIONS BELOW =============== */
+/* ===== NOTHING ABOVE IS MODIFIED OR REMOVED ============== */
+/* ========================================================= */
+
+/* 1️⃣ Subtle page fade (does NOT touch layout) */
+main {
+  animation: pageFade 0.6s ease;
+}
+
+@keyframes pageFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* 2️⃣ Hero image gentle floating (visual only) */
+.home-hero-image {
+  animation: heroFloat 2s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* 3️⃣ Team member micro hover motion */
+.team-member {
+  transition: transform 0.25s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+}
+
+/* 4️⃣ Info block soft hover lift */
+.info-block {
+  transition: transform 0.3s ease;
+}
+
+.info-block:hover {
+  transform: translateY(-5px);
+}
+
+/* 5️⃣ Section title underline grow (no color change) */
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: auto;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: currentColor;
+  transition: width 0.2s ease;
+}
+
+.section-title:hover::after {
+  width: 40%;
+}
+
+/* 6️⃣ Image press feedback (click animation) */
+img:active {
+  transform: scale(0.97);
+}
+
+/* 7️⃣ Button press feedback (already hover exists, this adds press) */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* 8️⃣ Card focus animation (keyboard accessibility) */
+.card:focus-within {
+  animation: focusPulse 0.6s ease;
+}
+
+@keyframes focusPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+/* ================= CSV / REACT RENDER FIX ================= */
+
+/* Ensure dynamic content never goes invisible */
+.preview-table,
+.preview-table *,
+.card table,
+.card table * {
+  opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Stop re-animation on re-rendered cards */
+.card {
+  will-change: auto;
+}
+/* ================= EVALUATION UPLOAD VISIBILITY FIX ================= */
+
+/* Force upload section to always be visible */
+.section .card:first-of-type {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+/* Ensure file input is always visible */
+input[type="file"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Prevent animation re-hide on re-render */
+.section .card {
+  will-change: auto;
+}
+/* ========================================================= */
+/* ============ EVALUATION SECTION ANIMATIONS ============== */
+/* ========================================================= */
+
+/* Base safety: evaluation content always visible */
+.evaluation .card {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- 1. Upload card animation ---------- */
+.evaluation .card:nth-of-type(1) {
+  animation: evalSlideIn 0.6s ease-out both;
+}
+
+@keyframes evalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- 2. CSV preview animation ---------- */
+.evaluation .card:nth-of-type(2) {
+  animation: evalFadeIn 0.7s ease-out both;
+  animation-delay: 0.15s;
+}
+
+@keyframes evalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- 3. Result section animation ---------- */
+.evaluation .card:nth-of-type(3) {
+  animation: evalPopIn 0.6s ease-out both;
+  animation-delay: 0.25s;
+}
+
+@keyframes evalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- 4. Upload button feedback ---------- */
+.evaluation .btn {
+  transition: transform 0.2s ease;
+}
+
+.evaluation .btn:hover {
+  transform: translateY(-2px);
+}
+
+.evaluation .btn:active {
+  transform: scale(0.96);
+}
+
+/* ---------- 5. CSV table smooth appearance ---------- */
+.evaluation .preview-table {
+  animation: tableReveal 0.5s ease-out both;
+}
+
+@keyframes tableReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
